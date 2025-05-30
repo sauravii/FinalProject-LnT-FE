@@ -2,8 +2,163 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Detail - Layout Custom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="product-detail.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">All Product</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Lip</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Eye</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Face</a></li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold active" href="#" aria-current="page">Skin care</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Hair care</a></li>
+          </ul>
+          <form class="d-flex me-3" role="search">
+            <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" />
+          </form>
+          <div class="d-flex align-items-center ms-auto">
+            <i class="bi bi-cart me-3 fs-4" style="cursor: pointer"></i>
+            <i class="bi bi-person fs-4" style="cursor: pointer"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container container-main">
+      <div class="product-image">
+        <img src="assets/images/moist.jpg" alt="Estee Lauder Revitalizing Supreme +" draggable="false" />
+      </div>
+
+      <div class="product-right">
+        <div class="top-info">
+          <div class="product-details">
+            <h5>ESTEE LAUDER</h5>
+            <h6>Revitalizing Supreme +</h6>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="stars" role="img">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <span class="text-muted small">4.9 (100+) | 100 people recommend this.</span>
+            </div>
+            <p class="mb-2">Size: <strong>50ml</strong></p>
+            <div class="mb-3 d-flex gap-2 flex-wrap">
+              <button class="btn btn-danger">50 ml</button>
+              <button class="btn btn-outline-secondary">30 ml</button>
+            </div>
+            <div class="mb-3 fs-5">
+              <span style="text-decoration: line-through; color: gray; font-size: 1rem">Rp 1.800.000</span>
+              <span class="text-danger fs-4 fw-bold"> Rp 1.350.000</span>
+            </div>
+            <div class="quantity-selector">
+              <span>Quantity</span>
+              <button class="btn btn-danger btn-sm" id="btnMinus">-</button>
+              <input type="number" value="1" min="1" class="form-control text-center" id="quantityInput" />
+              <button class="btn btn-danger btn-sm" id="btnPlus">+</button>
+            </div>
+          </div>
+
+          <div class="rating-summary">
+            <h6>Average rating</h6>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p><strong>4.9</strong> (98 of 100)</p>
+            <div class="d-flex flex-wrap gap-2 mb-2">
+              <span class="btn btn-outline-dark btn-sm">5/5 Effectiveness</span>
+              <span class="btn btn-outline-dark btn-sm">4/5 Packaging</span>
+              <span class="btn btn-outline-dark btn-sm">5/5 Value of money</span>
+              <span class="btn btn-outline-dark btn-sm">4/5 Texture</span>
+            </div>
+            <hr />
+            <p class="mb-1">Have you ever tried this product before?</p>
+            <button class="btn btn-dark btn-sm" id="btnAddReview">Add Review</button>
+            <div class="mt-3">
+              <span class="badge bg-danger">100% users recommend</span>
+              <span class="badge bg-danger">100% repurchased</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-tabs">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button">Detailed Product</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button">Review</button>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="product" role="tabpanel" aria-labelledby="product-tab">
+              <p class="mt-3">
+                Perawatan kulit berdasarkan usia: 20-an, 30-an, 40-an, Di atas 50. Ini adalah krim multi-aksi dengan SPF 15, melembapkan dan membantu kulit tampak lebih muda dan segar. Mengandung Ekstrak Moringa, Kolagen, dan Lavender untuk
+                memperkuat kulit, memberi hidrasi 24 jam dan elastisitas lebih baik.
+              </p>
+            </div>
+
+            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+              <div class="mt-3" id="reviewList">
+                <div class="mb-3">
+                  <p class="mb-1"><strong>Regina Hwang</strong></p>
+                  <p>I received this complimentary thorough Influenster. It’s a nice moisturizer, does well with what it states, but it’s not better than the original to me, on par. So 4 star. Still a great product.</p>
+                </div>
+                <div class="mb-3">
+                  <p class="mb-1"><strong>Ruth Tjitra</strong></p>
+                  <p>
+                    I really liked this. It was light, not heavy, but very moisturizing! Light scent and did not leave my face oily. My skin really liked this product. I will probably purchase this. I received this complimentary for review.
+                  </p>
+                </div>
+                <div class="mb-3">
+                  <p class="mb-1"><strong>Jaslyn Chendana</strong></p>
+                  <p>
+                    I did receive this product as a complimentary gift from Influenster to try out and give my honest opinion. After using this product for a couple of weeks, I loved it. Even though my skin is sensitive, this sat great on
+                    my skin under my makeup. Will definitely buy this.
+                  </p>
+                </div>
+              </div>
+
+              <form id="addReviewForm" class="d-none mt-4" novalidate>
+                <div class="mb-3">
+                  <label for="reviewerName" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="reviewerName" required />
+                </div>
+                <div class="mb-3">
+                  <label for="reviewText" class="form-label">Your Review</label>
+                  <textarea class="form-control" id="reviewText" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+                <button type="button" class="btn btn-secondary ms-2" id="cancelReview">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="product-detail.js"></script>
+  </body>
 </html>
