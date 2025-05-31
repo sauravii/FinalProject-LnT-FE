@@ -1,5 +1,160 @@
+:root {
+  /* tipografi */
+  --font-family: "Poppins";
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* color */
+  --color-primary: #d0cfcd;
+  --color-button: rgba(0, 0, 0, 0.5);
+  --color-container: #dbd5c5;
+  --color-separator: #d9d9d9;
+  --text-button: #fffefe;
+
+  /* fontsize */
+  --dp-10: 10px;
+  --dp-12: 12px;
+  --dp-14: 14px;
+  --dp-16: 16px;
+  --dp-18: 18px;
+  --dp-20: 20px;
+  --dp-22: 22px;
+  --dp-24: 24px;
+  --dp-26: 26px;
+  --dp-28: 28px;
+  --dp-30: 30px;
+  --dp-32: 32px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #ffffff;
+  flex: 1;
+}
+
+/* HEADER */
+.shipping-box {
+  background-color: var(--color-primary);
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 0px 100px;
+}
+
+.text-shipping {
+  margin-top: 12px;
+}
+
+.text-shipping span {
+  font-weight: var(--weight-bold);
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000 !important;
+}
+
+.hero-section {
+  position: relative;
+  display: inline-block;
+}
+
+.img-hero {
+  width: 100%;
+  display: block;
+}
+
+.btn-see-details {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  z-index: 10;
+  padding: 10px 30px;
+}
+/* END HEADER */
+
+/* CONTENT */
+.container-product {
+  background-color: var(--color-primary);
+  width: 800px;
+}
+
+.img-product {
+  width: 200px;
+}
+
+.btn-buy {
+  border-radius: 40px;
+  border: 1px solid #000000;
+}
+
+.box-product {
+  background-color: var(--color-container);
+  width: 227px;
+}
+
+.separator {
+  background-color: var(--color-separator);
+  height: 5px;
+  width: 100%;
+  margin: 100px 0;
+}
+/* END CONTENT */
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary);
+  margin-top: 165px;
+  margin-bottom: 0;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left p {
+  cursor: pointer;
+}
+
+.fw-bold {
+  font-size: var(--dp-22);
+}
+
+.footer p:hover {
+  text-decoration: underline;
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.sosmed p {
+  margin: 0;
+  line-height: 1;
+}
+
+/* END FOOTER */
