@@ -46,7 +46,7 @@ body {
   flex: 1;
 }
 
-/* HEADER */
+/* HEADER - INDEX PAGE*/
 .shipping-box {
   background-color: var(--color-primary);
   height: 50px;
@@ -88,9 +88,9 @@ body {
   z-index: 10;
   padding: 10px 30px;
 }
-/* END HEADER */
+/* END HEADER - INDEX PAGE*/
 
-/* CONTENT */
+/* CONTENT - INDEX PAGE*/
 .container-product {
   background-color: var(--color-primary);
   width: 800px;
@@ -116,9 +116,9 @@ body {
   width: 100%;
   margin: 100px 0;
 }
-/* END CONTENT */
+/* END CONTENT - INDEX PAGE*/
 
-/* FOOTER */
+/* FOOTER - INDEX PAGE*/
 .footer {
   background-color: var(--color-primary);
   margin-top: 165px;
@@ -156,5 +156,149 @@ body {
   margin: 0;
   line-height: 1;
 }
+/* END FOOTER - INDEX PAGE*/
 
-/* END FOOTER */
+/* CONTENT - CHECKOUT PAGE */
+.content {
+  padding: 20px 62px;
+  gap: 80px;
+  align-items: center;
+}
+
+.text-main {
+  font-size: var(--dp-28);
+}
+
+.text-desc {
+  color: #646464;
+  margin-top: -10px;
+  font-size: var(--dp-18);
+}
+
+.card-product {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border: 1px;
+  background-color: #f7f6f1;
+  border: 1px solid rgba(100, 100, 100, 0.47);
+  padding: 16px 20px;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+.box-img {
+  padding: 15px;
+  width: 235px;
+  height: auto;
+  border: 1px solid #646464;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.product-name {
+  font-size: var(--dp-20);
+}
+
+.product-name span {
+  font-size: var(--dp-16);
+}
+
+.list-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-order {
+  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+  align-items: center;
+}
+
+.desc-order .active {
+  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.voucher-label {
+  background-color: #f8e7ca;
+  padding: 10px 15px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  font-weight: 500;
+}
+
+.voucher-input {
+  background-color: #c8c8c8;
+  border: none;
+  padding: 10px 15px;
+  flex: 1;
+  color: #3a3a3a;
+  text-align: center;
+}
+
+.voucher-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.apply-btn {
+  background-color: #14c700;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  font-weight: 500;
+}
+
+.voucher-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.voucher-container {
+  display: flex;
+  gap: 10px;
+}
+
+.separator-content {
+  background-color: rgba(100, 100, 100, 0.32);
+  width: 1.5px;
+  height: 125vh;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.list-cust-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.cust-desc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cust-desc p {
+  margin: 0;
+  line-height: 1;
+}
+
+.address-desc {
+  margin-top: 35px;
+}
+/* END CONTENT - CHECKOUT PAGE */
