@@ -18,6 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  document.querySelector(".chat-btn").addEventListener("click", () => {
+    alert("Chat feature is coming soon!");
+  });
+
+  document.querySelector(".cart-btn").addEventListener("click", () => {
+    alert("Product has been added to your cart!");
+  });
+
+  document.querySelector(".buy-now-btn").addEventListener("click", () => {
+    alert("Proceeding to checkout...");
+  });
+
   btnAddReview.addEventListener("click", () => {
     addReviewForm.classList.remove("d-none");
   });
