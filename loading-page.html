@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading | Glamora</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Google Font: Instrument Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f8e7ca;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Instrument Sans", sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        letter-spacing: 0.4em;
+        font-size: 2.2rem;
+        color: #000;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      .logo-wrapper {
+        background: white;
+        border-radius: 50%;
+        padding: 50px;
+        margin: 30px 0;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 0.8s;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), /* glow dalam */ 0 0 40px rgba(255, 255, 255, 0.5), /* glow menengah */ 0 0 80px rgba(255, 255, 255, 0.8); /* glow menyebar luar */
+      }
+
+      .logo-wrapper img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .progress-container {
+        width: 450px;
+        margin: 10px auto 25px;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 1.5s;
+      }
+
+      .progress {
+        height: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+
+      .progress-bar {
+        background-color: #000;
+        width: 0%;
+        transition: width 0.2s ease;
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #111;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 2s;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 1.2rem;
+          letter-spacing: 0.2em;
+        }
+
+        .logo-wrapper {
+          padding: 30px;
+        }
+
+        .logo-wrapper img {
+          width: 110px;
+          height: 110px;
+        }
+
+        .progress-container {
+          width: 250px;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WELCOME&nbsp;&nbsp;TO&nbsp;&nbsp;GLAMORA</h1>
+
+    <div class="logo-wrapper">
+      <img src="img/logo.png" alt="Logo Glamora" />
+    </div>
+
+    <div class="progress-container">
+      <div class="progress">
+        <div class="progress-bar" id="loadingBar"></div>
+      </div>
+    </div>
+
+    <p>Beauty for Every Shade. Confidence for Every Day.</p>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+      const progressBar = document.getElementById("loadingBar");
+      let width = 0;
+      const interval = setInterval(() => {
+        if (width >= 100) {
+          clearInterval(interval);
+          // window.location.href = "home.html"; // Aktifkan jika ingin redirect
+        } else {
+          width += 1;
+          progressBar.style.width = width + "%";
+        }
+      }, 30);
+    </script>
+  </body>
+</html>
