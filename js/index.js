@@ -98,3 +98,7 @@ makeupProducts.forEach((product) => {
   `;
   makeupList.appendChild(item);
 });
+
+document.getElementById("btn-cart").addEventListener("click", () => {
+  window.location.href = "cart.html";
+});

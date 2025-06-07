@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".buy-now-btn").addEventListener("click", () => {
-    alert("Proceeding to checkout...");
+    window.location.href = "checkout.html";
   });
 
   btnAddReview.addEventListener("click", () => {
@@ -52,4 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     addReviewForm.classList.add("d-none");
     addReviewForm.reset();
   });
+});
+
+document.getElementById("btn-cart").addEventListener("click", () => {
+  window.location.href = "cart.html";
 });

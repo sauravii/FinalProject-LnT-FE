@@ -75,3 +75,7 @@ document.addEventListener("change", (e) => {
 voucherInput.addEventListener("input", updateTotal);
 
 renderCart();
+
+document.querySelector(".checkout-btn").addEventListener("click", () => {
+  window.location.href = "checkout.html";
+});
