@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".chat-btn").addEventListener("click", () => {
-    alert("Chat feature is coming soon!");
+    window.location.href = "chat.html";
   });
 
   document.querySelector(".cart-btn").addEventListener("click", () => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".buy-now-btn").addEventListener("click", () => {
-    window.location.href = "checkout.html";
+    alert("Proceeding to checkout...");
   });
 
   btnAddReview.addEventListener("click", () => {
