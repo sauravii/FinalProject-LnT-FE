@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".buy-now-btn").addEventListener("click", () => {
-    alert("Proceeding to checkout...");
+    window.location.href = "checkout.html";
   });
 
   btnAddReview.addEventListener("click", () => {
