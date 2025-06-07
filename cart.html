@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <title>My Cart</title>
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+    <header>
+      <button class="back-btn">&larr;</button>
+      <h1>My Cart</h1>
+    </header>
+
+    <main id="cart-items">
+      <!-- Produk di JavaScript -->
+    </main>
+
+    <footer>
+      <div class="left-section">
+        <div class="voucher-row">
+          <label for="voucher">Voucher</label>
+          <input type="text" id="voucher" placeholder="Masukkan kode voucher" />
+        </div>
+
+        <div class="total-row">
+          <span>Total</span>
+          <p id="totalPrice">Rp 0</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="checkout-btn">Checkout</button>
+    </footer>
+
+    <script src="js/cart.js"></script>
+  </body>
+</html>
